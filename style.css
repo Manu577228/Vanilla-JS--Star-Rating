@@ -1,0 +1,56 @@
+body {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  cursor: pointer;
+  font-size: 20rem;
+  color: #444;
+  transition: color 0.2s, transform 0.2s;
+  padding: 0 0.1rem;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  transform: scale(1.2);
+}
+
+.star-rating input:checked ~ label {
+  transform: scale(1.2);
+}
+
+.star-rating .red,
+.star-rating .yellow,
+.star-rating .green {
+  color: inherit;
+}
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+  .star-rating {
+    font-size: 1.5rem;
+  }
+
+  .star-rating label {
+    font-size: 2rem;
+  }
+}
